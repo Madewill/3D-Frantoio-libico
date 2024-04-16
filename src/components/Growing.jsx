@@ -1,4 +1,5 @@
 import React from 'react'
+import TreeCanvas from './canvas/tree';
 
 const Growing = ({ language }) => {
     return (
@@ -16,6 +17,7 @@ const Growing = ({ language }) => {
                             محاطة بتناغم الطبيعة، تزدهر األشجار، وأغصانها محملة بالمحاصيل المستقبلية.</p>
                             </>) }
                     </div>
+                    <TreeCanvas />
             </section>
 
 

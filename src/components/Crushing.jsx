@@ -1,4 +1,5 @@
 import React from 'react'
+import CrusherCanvas from './canvas/crusher';
 
 const Crushing = ({ language }) => {
     return (
@@ -19,6 +20,7 @@ const Crushing = ({ language }) => {
                     </p></>) : (<><p>في معاصرنا الحديثة، يتم تحويل الزيتون المحصود إلى زيت ذهبي غني صحي <br /> من خالل العصر البارد.</p> </>)}
                 
                 </div>
+                <CrusherCanvas />
             </section>
 
         </>

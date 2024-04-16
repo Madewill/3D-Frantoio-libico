@@ -1,4 +1,5 @@
 import React from 'react'
+import PresserCanvas from './canvas/presser';
 
 const ColdPressing = ({ language }) => {
     return (
@@ -16,6 +17,7 @@ const ColdPressing = ({ language }) => {
                         losing a drop of its essence.
                     </p> </>) : (<> <p>بين الحصاد والعصر، يكمن فن السحق. <br /> هنا، يتم سحق الزيتون بلطف، وهي عملية يتم فيها طحن اللحم <br /> والبذور لتكوين عجينة. تؤدي هذه الخطوة الحاسمة إلى فتح كنوز الزيتون المخفية، <br /> وإعدادها للتحول إلى ذهب سائل.</p> </>)}
                 </div>
+                <PresserCanvas />
             </section>
         </>
     )
