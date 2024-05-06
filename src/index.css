@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,129 +22,16 @@
   font-style: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
-  color-scheme: dark;
-  overflow-x: hidden;
+@font-face {
+  font-family: 'Cairo';
+  src: url('../assets/fonts/Cairo.ttf');
+  font-style: normal;
 }
 
-
-/* CSS VARIABLES */
-:root {
-  --text-color: #f7c166;
-  --page-color: #060F0C;
-  --bold-font: 'CopperplateCC-Bold', serif;
-  --light-font: 'CopperplateCC-Light', serif;
-  --oswald: 'Oswald-Regular', sans-serif;
-}
-
-
-body {
-  background: var(--page-color);
-  color: var(--text-color);
-}
-
-
-.Hero {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  position: relative;
-}
-
-.vid-overlay {
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  left: 0;
-  top: 0;
-  position: absolute;
-}
-
-video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  opacity: 0.08;
-}
-
-.nav {
-  width: 80%;
-  height: 18%;
-  background-color: transparent;
-  margin: 0 auto;
-  display: flex;
-  padding: 10px 0;
-  border-bottom: 0.4px solid #f7c166;
-  justify-content: space-between;
-}
-
-.contents {
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  /* padding: 0 auto;
-  align-self: center; */
-}
-
-
-.scroll-down {
-  display: none;
-}
-
-
-.contents h2 {
-  font-family: 'CopperplateCC-Bold', serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 48px;
-  font-weight: 600;
-}
-
-.contents p {
-  text-align: center;
-  font-family: var(--light-font);
-  text-transform: uppercase;
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  font-size: 20px;
-}
-
-.contents h3 {
-  text-align: center;
-  font-family: var(--light-font);
-  font-size: 16px;
-}
-
-.contents h3 span {
-  text-transform: uppercase;
-  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  font-family: var(--light-font);
-}
-
-.gif {
-  height: 250px;
-  width: 450px;
-}
-
-.gif img {
-  width: 100%;
-  height: 100%;
+@font-face {
+  font-family: 'Cairo-Bold';
+  src: url('../assets/fonts/Cairo-Bold.ttf');
+  font-style: normal;
 }
 
 
@@ -168,6 +53,309 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
+/* I used this class for the options on the hereo section that is in the app.jsx */
+.english-font {
+  font-family: var(--light-font);
+}
+
+/* THIS ARABIC HANLES THE STYLING IN ARABIC MODE */
+
+/* THis one just specifies the font to cairo  */
+
+/* THIS IS STYLING IS FOR THE  TEXT BELOW THE DROPLET IN HOME SECTION */
+
+
+/* This class applies to the setion texts  */
+
+/* Section title */
+
+/* .arabicSectionTitle {
+    font-family: var(--Bold-cairo);
+} */
+
+/* Using this class for my footer */
+.arabic-font {
+  font-family: var(--Cairo);
+  overflow: hidden;
+}
+
+
+/* this class is dedicated to the lower text in my hero */
+/* I had also wrapped them in a span */
+.arabic-font-hero {
+  font-family: var(--Cairo);
+  overflow: hidden;
+  font-size: 24px;
+}
+
+
+.Arabic {
+  overflow: hidden;
+  font-family: var(--Cairo);
+  font-size: 20px;
+}
+
+/* mobile ul style for english text */
+
+.ul-style {
+  font-family: var(--light-font);
+  font-size: 15px;
+  /* text-transform: capitalize; */
+}
+
+.oswald {
+  font-family: 'Oswald-Regular';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  overflow-x: hidden;
+}
+
+
+/* CSS VARIABLES */
+:root {
+  --text-color: #f7c166;
+  --page-color: #060F0C;
+  --bold-font: 'CopperplateCC-Bold', serif;
+  --light-font: 'CopperplateCC-Light', serif;
+  --oswald: 'Oswald-Regular', sans-serif;
+  --Cairo: 'Cairo', sans-serif;
+  --Bold-cairo: 'Cairo-Bold', sans-serif;
+}
+
+
+body {
+  background: var(--page-color);
+  color: var(--text-color);
+  font-family: var(--oswald);
+}
+
+/* mobile menu */
+.mobile-menu {
+  background-color: transparent;
+  position: relative;
+}
+
+.dropdown {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(6, 15, 12, 1);
+  z-index: 2;
+  margin-right: 5px;
+  padding: auto;
+  border: 0.5px solid #f7c166;
+}
+
+.dropdown li {
+  border-bottom: 1px solid #f7c166;
+  padding: 20px;
+  overflow: hidden;
+  justify-content: center;
+}
+
+
+/* This class is dedicated to the options in the hero section */
+.options {
+  margin-right: 40px;
+  /* font-family: var(--light-font); */
+}
+
+.Hero {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.vid-overlay {
+  width: 100%;
+  height: 100%;
+  z-index: -4;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.videobg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.04;
+  position: fixed;
+}
+
+.gradient {
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bottomGradient {
+  height: 350px;
+  background: linear-gradient(to top, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
+}
+
+.topGradient {
+  height: 400px;
+  background: linear-gradient(to bottom, rgba(6, 15, 12, 1) 0%, rgba(6, 15, 12, 0) 100%);
+}
+
+.nav {
+  width: 80%;
+  height: 18%;
+  background-color: transparent;
+  margin: 0 auto;
+  display: flex;
+  padding: 10px 0;
+  /* border-bottom: 0.4px solid #f7c166; */
+  justify-content: space-between;
+}
+
+.bar {
+  width: 80%;
+  height: 0.4px;
+  background-color: #f7c166;
+  margin: 0 auto;
+}
+
+.contents {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  /* padding: 0 auto;
+  align-self: center; */
+}
+
+
+/* FOR UPPER FRANTOIO LIBICO TEXT */
+.contents .up-contents {
+  font-weight: 900;
+  text-transform: uppercase;
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  font-size: 48px;
+}
+
+.frantoio {
+  background: #F2B01F;
+  background: linear-gradient(to right, #F2B01F 12%, #D39329 25%, #C4802A 33%, #F2B01F 52%, #D39329 71%, #C69330 50%, #F2B01F 0%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.7;
+}
+
+.goumet {
+  background: #F2B01F;
+background: linear-gradient(to right, #F2B01F 97%, #EAA32D 72%, #C4802A 11%, #EFAE1F 42%, #D39329 47%, #C69330 64%, #F2B01F 87%, #FFB921 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.process {
+  background: #F2B01F;
+background: linear-gradient(to right, #F2B01F 39%, #EAA32D 30%, #C4802A 48%, #EFAE1F 83%, #D39329 100%, #C69330 42%, #F2B01F 57%, #90341E 75%, #F2B01F 83%, #39170F 95%, #FFB921 91%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+}
+
+.contents .up-contents .english {
+  font-family: 'CopperplateCC-Bold', serif;
+}
+
+.contents .up-contents .arabic {
+  overflow: hidden;
+  font-family: var(--Bold-cairo);
+}
+
+.contents p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: var(--light-font);
+}
+
+/* .contents .ptext {
+  font-family: var(--light-font);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+} */
+
+
+.lower-text {
+  overflow: hidden;
+}
+
+.lower-tex h3 {
+  overflow: hidden;
+}
+
+/* class I am appointing for the enlish version of the lower text in the hero section spans */
+.lower-text h3 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: var(--light-font);
+}
+
+/* Removed the font-family keys so I can set the arabic mode font */
+
+.contents h3 {
+  text-align: center;
+  /* font-family: var(--light-font); */
+  font-size: 16px;
+}
+
+.contents h3 span {
+  text-transform: uppercase;
+  /* font-family: var(--light-font); */
+}
+
+.gif {
+  height: 250px;
+  width: 450px;
+}
+
+/* .gif img {
+  width: 100%;
+  height: 100%;
+} */
+
+.gif video {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-down {
+  display: none;
+}
 
 
 
@@ -177,7 +365,8 @@ body::-webkit-scrollbar-thumb {
 .harvesting,
 .crushing,
 .coldPressing,
-.bottling, .product-frame {
+.bottling,
+.product-frame {
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -188,38 +377,61 @@ body::-webkit-scrollbar-thumb {
 .harvesting h3,
 .crushing h3,
 .coldPressing h3,
-.bottling h3, .product-frame h3 {
-  /* position: absolute;
-  left: 40%; */
-      text-align: center;
-      font-size: 60px;
-      font-family: var(--bold-font);
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-top: 30px;
+.bottling h3,
+.product-frame h3 {
+  text-align: center;
+  margin-top: 30px;
 }
 
-.planting .section-text, .harvesting .section-text, .coldPressing .section-text {
-  font-size: 20px;
+.planting .english,
+.growing .english,
+.harvesting .english,
+.crushing .english,
+.coldPressing .english,
+.bottling .english,
+.product-frame .english {
+  font-size: 48px;
+  font-family: var(--bold-font);
+}
+
+.planting .arabicTitle,
+.growing .arabicTitle,
+.harvesting .arabicTitle,
+.crushing .arabicTitle,
+.coldPressing .arabicTitle,
+.bottling .arabicTitle,
+.product-frame .arabicTitle {
+  overflow: hidden;
+  font-size: 60px;
+  font-family: var(--Bold-cairo);
+}
+
+.planting .section-text,
+.harvesting .section-text,
+.coldPressing .section-text {
+  font-size: 26px;
   position: absolute;
   top: 300px;
   left: 120px;
+  font-family: var(--oswald);
+  overflow: hidden;
 }
 
-.growing .section-text, .crushing .section-text, .bottling
-.section-text {
-  font-size: 20px;
+
+.growing .section-text,
+.crushing .section-text,
+.bottling .section-text {
+  font-size: 26px;
   position: absolute;
   top: 300px;
   right: 120px;
+  font-family: var(--oswald);
+  overflow: hidden;
 }
 
 .product-frame span {
   font-family: var(--bold-font);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 48px;
 }
 
 
@@ -246,6 +458,10 @@ body::-webkit-scrollbar-thumb {
   color: var(--text-color);
 }
 
+.languages img {
+  color: #f7c166;
+}
+
 
 .languages .partition {
   width: 2px;
@@ -255,6 +471,7 @@ body::-webkit-scrollbar-thumb {
 
 .menu {
   margin-right: 40px;
+  /* position: relative; */
 }
 
 
@@ -282,12 +499,17 @@ body::-webkit-scrollbar-thumb {
 
 .contact-us h3,
 .about-us h3 {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: var(--oswald);
-  font-size: 58px;
+  -webkit-text-fill-color: transparent; */
+  font-size: 30px;
 }
+
+.contact-us .english,
+.about-us .english {
+  font-family: var(--oswald);
+}
+
 
 .contact-us input {
   /* font-family: var(--oswald); */
@@ -311,7 +533,7 @@ body::-webkit-scrollbar-thumb {
 
 .contact-us input:hover,
 .contact-us textarea:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.01); */
   transition: transform 0.3s ease;
 }
 
@@ -331,9 +553,9 @@ body::-webkit-scrollbar-thumb {
 
 .contact-us button:hover {
   background-color: transparent;
-  border: 0.5px solid  #f7c166;
+  border: 0.5px solid #f7c166;
   color: var(--text-color);
-  transform: scale(1.02);
+  transform: scale(1.01);
   transition: transform 0.3s ease;
 }
 
@@ -448,71 +670,59 @@ div.loader {
 
 
 /* Styling for full screen */
-@media screen and (min-width: 1024px) and (min-height: 768px) {
-  
-.contents {
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  /* padding: 0 auto;
+/* @media screen and (min-width: 1024px) and (min-height: 768px)  */
+@media screen and (min-width: 1024px)  and (min-height: 768px) {
+
+  .contents {
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    /* padding: 0 auto;
   align-self: center; */
-}
+  }
 
-.contents h2 {
-  font-family: 'CopperplateCC-Bold', serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 48px;
-  font-weight: 600;
-}
+  .lower-text {
+    margin-top: 20px;
+  }
 
-.contents p {
-  text-align: center;
-  font-family: var(--light-font);
-  text-transform: uppercase;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 20px;
-}
 
-.contents h3 {
-  text-align: center;
-  font-family: var(--light-font);
-  font-size: 20px;
-}
 
-.contents h3 span {
-  text-transform: uppercase;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: var(--light-font);
-}
-
-.gif {
-  height: 300px;
-  width: 450px;
-}
-
-.gif img {
-  width: 100%;
-  height: 100%;
 }
 
 
-.copyright-mobile {
-  display: none;
-}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -547,7 +757,14 @@ div.loader {
 
 
 /* Media query for screens smaller than 768px (mobile) */
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 768px) {
+
+  .arabic-font-hero {
+    font-family: var(--Cairo);
+    overflow: hidden;
+    font-size: 14px;
+  }
+
   /*  NAV */
   .nav {
     width: 90%;
@@ -556,10 +773,17 @@ div.loader {
     margin: 0 auto;
     display: flex;
     padding: 10px 0;
-    border-bottom: 0.4px solid #f7c166;
+    /* border-bottom: 0.4px solid #f7c166; */
     justify-content: space-between;
   }
-  
+
+  .bar {
+    width: 90%;
+    height: 0.4px;
+    background-color: #f7c166;
+    margin: 0 auto;
+  }
+
   .contents {
     width: 100%;
     box-sizing: border-box;
@@ -572,19 +796,19 @@ div.loader {
     /* padding: 0 auto;
     align-self: center; */
   }
-  
+
   .contents h2 {
     font-family: 'CopperplateCC-Bold', serif;
     font-weight: 900;
     text-transform: uppercase;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     font-size: 35px;
     font-weight: 600;
     text-align: center;
   }
-  
+
   .contents p {
     text-align: center;
     font-family: var(--light-font);
@@ -592,91 +816,108 @@ div.loader {
     /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-    font-size: 16px;
+    font-size: 14px;
   }
-  
+
+  .lower-text {
+    overflow: hidden;
+  }
+
+  .lower-tex h3 {
+    overflow: hidden;
+  }
+
+  /* class I am appointing for the enlish version of the lower text in the hero section spans */
+  .lower-text h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: var(--light-font);
+  }
+
+  /* Removed the font-family keys so I can set the arabic mode font */
+
   .contents h3 {
     text-align: center;
-    font-family: var(--light-font);
-    font-size: 15px;
+    /* font-family: var(--light-font); */
+    font-size: 16px;
   }
-  
+
   .contents h3 span {
     text-transform: uppercase;
-    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-    font-family: var(--light-font);
+    /* font-family: var(--light-font); */
   }
-  
+
   .gif {
     height: 300px;
     width: 450px;
   }
-  
+
   .gif img {
     width: 100%;
     height: 100%;
   }
 
-/* ABSOLUTE POSITIONED SWITCHING BUTTONS AND IT"S DIV */
-.languages {
-  right: 20px;
-  top: 50px;
-}
-  
-  
-.menu {
-  margin-right: 10px;
-}
+  /* ABSOLUTE POSITIONED SWITCHING BUTTONS AND IT"S DIV */
+  .languages {
+    right: 20px;
+    top: 50px;
+  }
 
 
-div.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 20;
-  font-family: var(--light-font);
-
-  background-color: var(--page-color);
-  color: var(--text-color);
-
-  padding: 2rem;
-  font-size: 80px;
-
-  display: flex;
-  align-items: flex-end;
-}
-
-.loader.fadeOut {
-  transition: opacity 1s ease;
-  opacity: 0;
-}
-
-.loader.closeFromBottom {
-  transition: height 1s ease;
-  height: 0;
-  overflow: hidden;
-}
+  .menu {
+    margin-right: 10px;
+  }
 
 
+  div.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    font-family: var(--light-font);
 
-   /* SCROLL-DOWN ELEMENT MOBILE SCREEN */
-   
-   @keyframes zoomInOut {
+    background-color: var(--page-color);
+    color: var(--text-color);
+
+    padding: 2rem;
+    font-size: 40px;
+
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .loader.fadeOut {
+    transition: opacity 1s ease;
+    opacity: 0;
+  }
+
+  .loader.closeFromBottom {
+    transition: height 1s ease;
+    height: 0;
+    overflow: hidden;
+  }
+
+
+
+  /* SCROLL-DOWN ELEMENT MOBILE SCREEN */
+
+  @keyframes zoomInOut {
     0% {
       transform: scale(1);
     }
+
     50% {
       transform: scale(1.1);
     }
+
     100% {
       transform: scale(1);
     }
   }
-  
+
   .scroll-down {
     display: block;
     position: absolute;
@@ -684,211 +925,252 @@ div.loader {
     left: 42.5%;
     top: 90%;
     transform: translate(-50%, -50%);
-    animation: zoomInOut 1s infinite alternate; /* Change the duration as needed */
+    animation: zoomInOut 1s infinite alternate;
+    /* Change the duration as needed */
     color: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-    transform-origin: center; /* Set the transform-origin to center */
+    transform-origin: center;
+    /* Set the transform-origin to center */
   }
 
 
 
 
 
-/* FOOTER */
-.footer {
-  border-top: 0.4px solid #f7c166;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 10px;
-  margin-top: 40px;
-  box-sizing: border-box;
-  justify-content:flex-end;
-  align-items: center;
-  gap: 80px;
-}
+  /* FOOTER */
+  .footer {
+    border-top: 0.4px solid #f7c166;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 80px;
+  }
 
-/* CONTACT FORM DIV */
-.contact-us {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 25px;
-  overflow: hidden;
-}
+  /* CONTACT FORM DIV */
+  .contact-us {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    overflow: hidden;
+  }
 
-.contact-us h3,
-.about-us h3 {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
+  .contact-us h3,
+  .about-us h3 {
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: var(--oswald);
-  font-size: 28px;
-}
+  -webkit-text-fill-color: transparent; */
+    font-size: 30px;
+  }
 
-.contact-us input {
-  /* font-family: var(--oswald); */
-  background-color: transparent;
-  height: 40px;
-  width: 100%;
-  border: 0.2px solid #f7c166;
-  padding-left: 20px;
-  color: #f7c166;
-}
+  .contact-us .english,
+  .about-us .english {
+    font-family: var(--oswald);
+  }
 
-.contact-us textarea {
-  /* font-family: var(--oswald); */
-  padding: 10px 0px 10px 20px;
-  border: 0.2px solid #f7c166;
-  background-color: transparent;
-  width: 100%;
-  height: 122px;
-  color: #f7c166;
-}
+  .contact-us input {
+    /* font-family: var(--oswald); */
+    background-color: transparent;
+    height: 40px;
+    width: 100%;
+    border: 0.2px solid #f7c166;
+    padding-left: 20px;
+    color: #f7c166;
+  }
 
-.contact-us input:hover,
-.contact-us textarea:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
-}
+  .contact-us textarea {
+    /* font-family: var(--oswald); */
+    padding: 10px 0px 10px 20px;
+    border: 0.2px solid #f7c166;
+    background-color: transparent;
+    width: 100%;
+    height: 122px;
+    color: #f7c166;
+  }
 
-
-.contact-us button {
-  /* font-family: var(--oswald); */
-  width: 140px;
-  height: 40px;
-  background-color: #f7c166;
-  color: #060F0C;
-  font-size: 20px;
-  border: none;
-  outline: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-us button:hover {
-  background-color: transparent;
-  border: 0.5px solid  #f7c166;
-  color: var(--text-color);
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
-}
-
-.contact-us button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #f7c166;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.contact-us button:hover::before {
-  opacity: 1;
-}
+  .contact-us input:hover,
+  .contact-us textarea:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
 
 
+  .contact-us button {
+    /* font-family: var(--oswald); */
+    width: 140px;
+    height: 40px;
+    background-color: #f7c166;
+    color: #060F0C;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+  }
 
+  .contact-us button:hover {
+    background-color: transparent;
+    border: 0.5px solid #f7c166;
+    color: var(--text-color);
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+  }
 
+  .contact-us button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f7c166;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
-/* ABOUT US DIV */
-.about-us {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 100%;
-  height: 40%;
-  /* gap: 5px; */
-  overflow: hidden;
-}
-
-.about-us .about p {
-  /* font-family: var(--oswald); */
-  /* margin-top: 20px; */
-  /* overflow: hidden; */
-}
-
-.contacts-container {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 20px;
-}
-
-.contact p,
-.copyright p {
-  /* font-family: var(--light-font); */
-}
-
-.copyright {
-  display: none;
-}
-
-.copyright-mobile {
-  display: block;
-  text-align: center;
-}
+  .contact-us button:hover::before {
+    opacity: 1;
+  }
 
 
 
 
 
+  /* ABOUT US DIV */
+  .about-us {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 40%;
+    /* gap: 5px; */
+    overflow: hidden;
+  }
 
-/* SECTIONS STYLING */
-.planting,
-.growing,
-.harvesting,
-.crushing,
-.coldPressing,
-.bottling, .product-frame {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-}
+  .about-us .about p {
+    /* font-family: var(--oswald); */
+    /* margin-top: 20px; */
+    /* overflow: hidden; */
+  }
 
-.planting h3,
-.growing h3,
-.harvesting h3,
-.crushing h3,
-.coldPressing h3,
-.bottling h3, .product-frame h3 {
-  /* position: absolute;
+  .contacts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+  }
+
+  .contact p,
+  .copyright p {
+    /* font-family: var(--light-font); */
+  }
+
+  .copyright {
+    display: none;
+  }
+
+  .copyright-mobile {
+    display: block;
+    text-align: center;
+  }
+
+
+
+
+
+
+  /* SECTIONS STYLING */
+  .planting,
+  .growing,
+  .harvesting,
+  .crushing,
+  .coldPressing,
+  .bottling,
+  .product-frame {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+  }
+
+  .planting .english,
+  .growing  .english,
+  .harvesting  .english,
+  .crushing  .english,
+  .coldPressing  .english,
+  .bottling  .english,
+  .product-frame  .english {
+    /* position: absolute;
   left: 40%; */
-      text-align: center;
-      font-size: 38px;
-      font-family: var(--bold-font);
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-top: 30px;
-}
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--bold-font);
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    margin-top: 30px;
+  }
 
 
-.planting .section-text, .harvesting .section-text, .coldPressing .section-text {
+  .planting .section-text,
+  .coldPressing .section-text {
     text-align: center;
     font-size: 20px;
     position: absolute;
     top: 650px;
-    left: 10px;
-}
+    left: 60px;
+  }
 
-.growing .section-text, .crushing .section-text, .bottling
-.section-text {
+  /* arabic positon control
+  .engstyle {
+    left: 60px;
+  }
+
+  .arabstyle {
+    left: 50px;
+  } */
+
+  .harvesting .section-text {
     text-align: center;
     font-size: 20px;
     position: absolute;
     top: 650px;
-    right: 10px;
-}
+    left: 64px;
+  }
 
-.product-frame span {
-  font-family: var(--bold-font);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
+  .crushing .section-text {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 650px;
+    right: 60px;
+  }
+  
+  .growing .section-text {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 650px;
+    right: 70px;
+  }
+
+  .bottling .section-text {
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    top: 650px;
+    right: 35px;
+  }
+
+  .product-frame span {
+    font-family: var(--bold-font);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), #d28d00, #f7c166);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 }
